@@ -1,0 +1,33 @@
+{%extends 'layout.html'%}
+{%block style%}
+    Question 5
+{%endblock style%}
+{%block content%}
+    <div class="quiz-container">
+        <p>CLIMATE CHANGE QUIZ</p>
+        <div class="quiz-header">
+            <h3>Awesome Quiz Application</h3>
+            <h3>Score: {{session.get('score',0)}} </h3>
+        </div>
+        <div class="quizbody">
+            <h2>5. What was agreed to in the "Paris Agreement" that came out of COP-21, held in Paris in 2015?</h2>
+        </div>
+            <form action="/q5" method="post">
+                <div>
+                    <input type="radio" name="option" id="option1" value="1">
+                    <label for="option1" class="option-1">True</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option2" value="2">
+                    <label for="option2" class="option-2">False</label>
+                </div>
+            
+                <button type="submit">Submit</button>
+            </form>
+        <div class="quiz-footer">
+            <h4>1 of 5 Questions</h4>
+            <a href="/q6"><button>Next Question</button></a>
+        </div>
+    </div>
+
+{%endblock content%}

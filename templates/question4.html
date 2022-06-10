@@ -1,0 +1,40 @@
+{%extends 'layout.html'%}
+{%block style%}
+    Question 4
+{%endblock style%}
+{%block content%}
+    <div class="quiz-container">
+        <p>CLIMATE CHANGE QUIZ</p>
+        <div class="quiz-header">
+            <h3>Awesome Quiz Application</h3>
+            <h3>Score: {{session.get('score',0)}} </h3>
+        </div>
+        <div class="quizbody">
+            <h2>4. What can you do to help fight climate change?</h2>
+        </div>
+            <form action="/q4" method="post">
+                <div>
+                    <input type="radio" name="option" id="option1" value="1">
+                    <label for="option1" class="option-1">Divest from fossil fuel companies</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option2" value="2">
+                    <label for="option2" class="option-2">Engage yourself in the science behind climate change</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option3" value="3">
+                    <label for="option3" class="option-3">Vote for political candidates who will advocate for climate-related legislation and policy improvements</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option4" value="4">
+                    <label for="option4" class="option-4">All of the above</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        <div class="quiz-footer">
+            <h4>1 of 5 Questions</h4>
+            <a href="/q5"><button>Next Question</button></a>
+        </div>
+    </div>
+
+{%endblock content%}

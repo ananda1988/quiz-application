@@ -1,0 +1,44 @@
+{%extends 'layout.html'%}
+{%block style%}
+    Question 3
+{%endblock style%}
+{%block content%}
+    <div class="quiz-container">
+        <p>CLIMATE CHANGE QUIZ</p>
+        <div class="quiz-header">
+            <h3>Awesome Quiz Application</h3>
+            <h3>Score: {{session.get('score',0)}}</h3>
+        </div>
+        <div class="quizbody">
+            <h2>3. Which of the following are consequences associated with climate change? </h2>
+        </div>
+            <form action="/q3" method="post">
+                <div>
+                    <input type="radio" name="option" id="option1" value="1">
+                    <label for="option1" class="option-1">The ice sheets are declining, glaciers are in retreat globally, and our oceans are more acidic than ever</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option2" value="2">
+                    <label for="option2" class="option-2">Surface temperatures are setting new heat records about each year</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option3" value="3">
+                    <label for="option3" class="option-3">More extreme weather like droughts, heat waves, and hurricanes</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option4" value="4">
+                    <label for="option4" class="option-4">Global sea levels are rising at an alarmingly fast rate — 17 centimeters (6.7 inches) in the last century alone and going higher</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option-5" value="5">
+                    <label for="option-5">All of the above</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        <div class="quiz-footer">
+            <h4>1 of 5 Questions</h4>
+            <a href="/q4"><button>Next Question</button></a>
+        </div>
+    </div>
+
+{%endblock content%}

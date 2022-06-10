@@ -1,0 +1,40 @@
+{%extends 'layout.html'%}
+{%block style%}
+    Question 2
+{%endblock style%}
+{%block content%}
+    <div class="quiz-container">
+        <p>CLIMATE CHANGE QUIZ</p>
+        <div class="quiz-header">
+            <h3>Awesome Quiz Application</h3>
+            <h3>Score: {{session.get('score',0)}} </h3>
+        </div>
+        <div class="quizbody">
+            <h2>2. What is the Greenhouse effect?</h2>
+        </div>
+            <form action="/q2" method="post">
+                <div>
+                    <input type="radio" name="option" id="option1" value="1">
+                    <label for="option1" class="option-1">The name of climate change legislation that was passed by Congress</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option2" value="2">
+                    <label for="option2" class="option-2">When you paint your house green to become an environmentalist</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option3" value="3">
+                    <label for="option3" class="option-3">When the gases in our atmosphere trap heat and block it from escaping our planet</label>
+                </div>
+                <div>
+                    <input type="radio" name="option" id="option4" value="4">
+                    <label for="option4" class="option-4">When you build a green house</label>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+        <div class="quiz-footer">
+            <h4>1 of 5 Questions</h4>
+            <a href="/q3"><button>Next Question</button></a>
+        </div>
+    </div>
+{%endblock content%}

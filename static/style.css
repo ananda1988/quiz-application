@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: royalblue;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background-image: url(../static/bg.jpg);
+    background-color: grey;
+    background-blend-mode: multiply;
+}
+.quiz-container{
+    display: inline-grid;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 40px 60px 40px 60px;
+    line-height: 30px;
+    gap: 20px;
+    box-shadow: 0 0 10px 2px black;
+    border-radius: 5px;
+}
+.quiz-header{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(44, 121, 116);
+}
+.quizbody{
+    color: rgb(71, 74, 255);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+label{
+    background-color: rgba(173, 216, 230, 0.48);
+    padding: 0 20px 0 10px;
+    border: solid lightblue;
+    border-radius: 5px;
+}
+form input{
+    display: none;
+}
+.quiz-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.quiz-footer button,button{
+    background-color: royalblue;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+label:hover{
+    background-color: grey;
+}
+form>div{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+form>div label{
+    flex: 5;
+   
+    order: 2;
+}
+form>div input{
+    flex: 1;
+    border: solid;
+}
+p{
+    text-align: center;
+    text-decoration: underline grey;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#option1:checked ~ .option-1,
+#option2:checked ~ .option-2,
+#option3:checked ~ .option-3,
+#option4:checked ~ .option-4
+        {
+            background-color: darkblue;
+            color: white;
+        }
